@@ -1,0 +1,151 @@
+﻿<Window x:Class="PivotControl.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PivotControl"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="750" Width="800">
+    <Window.Resources>
+        <Style x:Key="FocusVisual">
+            <Setter Property="Control.Template">
+                <Setter.Value>
+                    <ControlTemplate>
+                        <Rectangle Margin="2" StrokeDashArray="1 2" Stroke="{DynamicResource {x:Static SystemColors.ControlTextBrushKey}}" SnapsToDevicePixels="true" StrokeThickness="1"/>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+        
+        <Style x:Key="CustomTabItemStyle" TargetType="{x:Type TabItem}">
+            <Setter Property="FocusVisualStyle" Value="{StaticResource FocusVisual}"/>
+            <Setter Property="Foreground" Value="Black"/>
+            <Setter Property="Margin" Value="0"/>
+            <Setter Property="Padding" Value="6,2,6,2"/>
+            <Setter Property="HorizontalContentAlignment" Value="Stretch"/>
+            <Setter Property="VerticalContentAlignment" Value="Stretch"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type TabItem}">
+                        <Grid x:Name="templateRoot" 
+                              SnapsToDevicePixels="true">
+                            <Grid Margin="{TemplateBinding Padding}">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition/>
+                                    <RowDefinition Height="Auto"/>
+                                </Grid.RowDefinitions>
+
+                                <ContentPresenter x:Name="contentPresenter" 
+                                                  ContentSource="Header" 
+                                                  Focusable="False" 
+                                                  HorizontalAlignment="{Binding HorizontalContentAlignment, RelativeSource={RelativeSource AncestorType={x:Type ItemsControl}}}" 
+                                                  Margin="{TemplateBinding Padding}" 
+                                                  RecognizesAccessKey="True" 
+                                                  SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" 
+                                                  VerticalAlignment="{Binding VerticalContentAlignment, RelativeSource={RelativeSource AncestorType={x:Type ItemsControl}}}"/>
+
+                                <Border x:Name="selectionBorder"
+                                        BorderBrush="SlateGray"
+                                        BorderThickness="1"
+                                        Opacity="0"
+                                        Margin="0,2.5,0,0"
+                                        Grid.Row="1"/>
+                            </Grid>
+                        </Grid>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsSelected" Value="True">
+                                <Setter Property="Opacity" TargetName="selectionBorder" Value="1"/>
+                                <Setter Property="Foreground" Value="Black"/>
+                            </Trigger>
+
+                            <Trigger Property="IsSelected" Value="False">
+                                <Setter Property="Opacity" TargetName="selectionBorder" Value="0"/>
+                                <Setter Property="Foreground" Value="SlateGray"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </Window.Resources>
+    
+    <Grid Margin="10">
+        <TabControl ItemContainerStyle="{DynamicResource CustomTabItemStyle}">
+            <TabItem Header="Tab One"
+                     IsSelected="True">
+                <StackPanel VerticalAlignment="Center"
+                            HorizontalAlignment="Center">
+                    <TextBlock FontSize="20"
+                               FontWeight="Bold">
+                        Tab One Header
+                    </TextBlock>
+
+                    <TextBlock TextWrapping="Wrap"
+                               Margin="0,20,0,0">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. In consectetur velit id commodo dictum. Donec vitae semper quam. Mauris leo lacus, euismod ac velit vehicula, pellentesque sollicitudin justo. Sed ornare mi erat, ut euismod neque euismod eget. Suspendisse suscipit et lacus a vehicula. Interdum et malesuada fames ac ante ipsum primis in faucibus. Vivamus quis turpis scelerisque, pulvinar augue et, pellentesque enim. Vivamus aliquam mollis porta. Donec vitae vestibulum est, a sodales velit. Aenean pulvinar posuere quam, at sollicitudin sem euismod in. Suspendisse elementum nibh a ante interdum aliquet. Curabitur finibus fermentum quam quis fermentum. Cras sem erat, tristique volutpat arcu vel, posuere tempus nulla. Proin odio massa, finibus non egestas at, ultrices in odio. Curabitur eget bibendum dolor.
+                    </TextBlock>
+                </StackPanel>
+            </TabItem>
+
+            <TabItem Header="Tab Two">
+                <StackPanel VerticalAlignment="Center"
+                            HorizontalAlignment="Center">
+                    <TextBlock FontSize="20"
+                               FontWeight="Bold">
+                        Tab Two Header
+                    </TextBlock>
+
+                    <TextBlock TextWrapping="Wrap"
+                               Margin="0,20,0,0">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. In consectetur velit id commodo dictum. Donec vitae semper quam. Mauris leo lacus, euismod ac velit vehicula, pellentesque sollicitudin justo. Sed ornare mi erat, ut euismod neque euismod eget. Suspendisse suscipit et lacus a vehicula. Interdum et malesuada fames ac ante ipsum primis in faucibus. Vivamus quis turpis scelerisque, pulvinar augue et, pellentesque enim. Vivamus aliquam mollis porta. Donec vitae vestibulum est, a sodales velit. Aenean pulvinar posuere quam, at sollicitudin sem euismod in. Suspendisse elementum nibh a ante interdum aliquet. Curabitur finibus fermentum quam quis fermentum. Cras sem erat, tristique volutpat arcu vel, posuere tempus nulla. Proin odio massa, finibus non egestas at, ultrices in odio. Curabitur eget bibendum dolor.
+                    </TextBlock>
+                </StackPanel>
+            </TabItem>
+
+            <TabItem Header="Tab Three">
+                <StackPanel VerticalAlignment="Center"
+                            HorizontalAlignment="Center">
+                    <TextBlock FontSize="20"
+                               FontWeight="Bold">
+                        Tab Three Header
+                    </TextBlock>
+
+                    <TextBlock TextWrapping="Wrap"
+                               Margin="0,20,0,0">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. In consectetur velit id commodo dictum. Donec vitae semper quam. Mauris leo lacus, euismod ac velit vehicula, pellentesque sollicitudin justo. Sed ornare mi erat, ut euismod neque euismod eget. Suspendisse suscipit et lacus a vehicula. Interdum et malesuada fames ac ante ipsum primis in faucibus. Vivamus quis turpis scelerisque, pulvinar augue et, pellentesque enim. Vivamus aliquam mollis porta. Donec vitae vestibulum est, a sodales velit. Aenean pulvinar posuere quam, at sollicitudin sem euismod in. Suspendisse elementum nibh a ante interdum aliquet. Curabitur finibus fermentum quam quis fermentum. Cras sem erat, tristique volutpat arcu vel, posuere tempus nulla. Proin odio massa, finibus non egestas at, ultrices in odio. Curabitur eget bibendum dolor.
+                    </TextBlock>
+                </StackPanel>
+            </TabItem>
+
+            <TabItem Header="Tab Four">
+                <StackPanel VerticalAlignment="Center"
+                            HorizontalAlignment="Center">
+                    <TextBlock FontSize="20"
+                               FontWeight="Bold">
+                        Tab Four Header
+                    </TextBlock>
+
+                    <TextBlock TextWrapping="Wrap"
+                               Margin="0,20,0,0">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. In consectetur velit id commodo dictum. Donec vitae semper quam. Mauris leo lacus, euismod ac velit vehicula, pellentesque sollicitudin justo. Sed ornare mi erat, ut euismod neque euismod eget. Suspendisse suscipit et lacus a vehicula. Interdum et malesuada fames ac ante ipsum primis in faucibus. Vivamus quis turpis scelerisque, pulvinar augue et, pellentesque enim. Vivamus aliquam mollis porta. Donec vitae vestibulum est, a sodales velit. Aenean pulvinar posuere quam, at sollicitudin sem euismod in. Suspendisse elementum nibh a ante interdum aliquet. Curabitur finibus fermentum quam quis fermentum. Cras sem erat, tristique volutpat arcu vel, posuere tempus nulla. Proin odio massa, finibus non egestas at, ultrices in odio. Curabitur eget bibendum dolor.
+                    </TextBlock>
+                </StackPanel>
+            </TabItem>
+
+            <TabItem Header="Tab Five">
+                <StackPanel VerticalAlignment="Center"
+                            HorizontalAlignment="Center">
+                    <TextBlock FontSize="20"
+                               FontWeight="Bold">
+                         Tab Five Header
+                    </TextBlock>
+
+                    <TextBlock TextWrapping="Wrap"
+                               Margin="0,20,0,0">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. In consectetur velit id commodo dictum. Donec vitae semper quam. Mauris leo lacus, euismod ac velit vehicula, pellentesque sollicitudin justo. Sed ornare mi erat, ut euismod neque euismod eget. Suspendisse suscipit et lacus a vehicula. Interdum et malesuada fames ac ante ipsum primis in faucibus. Vivamus quis turpis scelerisque, pulvinar augue et, pellentesque enim. Vivamus aliquam mollis porta. Donec vitae vestibulum est, a sodales velit. Aenean pulvinar posuere quam, at sollicitudin sem euismod in. Suspendisse elementum nibh a ante interdum aliquet. Curabitur finibus fermentum quam quis fermentum. Cras sem erat, tristique volutpat arcu vel, posuere tempus nulla. Proin odio massa, finibus non egestas at, ultrices in odio. Curabitur eget bibendum dolor.
+                    </TextBlock>
+                </StackPanel>
+            </TabItem>
+        </TabControl> 
+    </Grid>
+</Window>
