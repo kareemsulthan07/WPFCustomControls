@@ -25,4 +25,18 @@ namespace TextBoxWithPlaceHolderText
             InitializeComponent();
         }
     }
+
+    public class CustomTextBox : TextBox
+    {
+        public string PlaceholderText
+        {
+            get { return (string)GetValue(PlaceholderTextProperty); }
+            set { SetValue(PlaceholderTextProperty, value); }
+        }
+
+        // Using a DependencyProperty as the backing store for PlaceholderText.  This enables animation, styling, binding, etc...
+        public static readonly DependencyProperty PlaceholderTextProperty =
+            DependencyProperty.Register("PlaceholderText", typeof(string), typeof(CustomTextBox), new PropertyMetadata(string.Empty));
+
+    }
 }
