@@ -92,7 +92,6 @@
                                            FontSize="{TemplateBinding FontSize}"
                                            FontFamily="{TemplateBinding FontFamily}"
                                            VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
-                                           Margin="5,0,0,0"
                                            Visibility="Collapsed"/>
                             </Grid>
 
@@ -125,6 +124,7 @@
             </Style.Triggers>
         </Style>
     </Window.Resources>
+    
     <StackPanel VerticalAlignment="Center">
         <TextBox Style="{DynamicResource TextBoxStyle1}" 
                  VerticalAlignment="Center"
@@ -140,9 +140,9 @@
                              Height="30"
                              Width="200"
                              FontSize="16"
-                             Padding="4,0,0,0"
                              VerticalContentAlignment="Center"
                              PlaceholderText="Hello Kareem Sulthan.."
+                             Padding="3,0,3,0"
                              Style="{StaticResource customTextBoxStyle}"/>
     </StackPanel>
 </Window>

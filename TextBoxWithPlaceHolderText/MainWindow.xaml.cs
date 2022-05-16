@@ -13,6 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
+
 namespace TextBoxWithPlaceHolderText
 {
     /// <summary>
@@ -38,5 +39,16 @@ namespace TextBoxWithPlaceHolderText
         public static readonly DependencyProperty PlaceholderTextProperty =
             DependencyProperty.Register("PlaceholderText", typeof(string), typeof(CustomTextBox), new PropertyMetadata(string.Empty));
 
+
+        public override void OnApplyTemplate()
+        {
+            base.OnApplyTemplate();
+
+            if (Template.FindName("placeHolderTextBlock", this) is TextBlock textBlock)
+            {
+                textBlock.Margin = new Thickness(this.Padding.Left + 1, 0, 0, 0);
+            }
+
+        }
     }
 }
