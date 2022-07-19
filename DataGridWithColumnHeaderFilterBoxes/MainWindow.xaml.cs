@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -13,8 +14,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-
-namespace TextBoxWithPlaceHolderText
+namespace DataGridWithColumnHeaderFilterBoxes
 {
     /// <summary>
     /// Interaction logic for MainWindow.xaml
@@ -26,6 +26,10 @@ namespace TextBoxWithPlaceHolderText
             InitializeComponent();
         }
 
+        private void DataGrid_Sorting(object sender, DataGridSortingEventArgs e)
+        {
+            Debug.WriteLine($"Sorting {e.Column.SortDirection}");
+        }
     }
 
     public class CustomTextBox : TextBox

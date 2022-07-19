@@ -79,20 +79,43 @@
             <Setter Property="AllowDrop" Value="true"/>
             <Setter Property="ScrollViewer.PanningMode" Value="VerticalFirst"/>
             <Setter Property="Stylus.IsFlicksEnabled" Value="False"/>
+            <Setter Property="SnapsToDevicePixels" Value="True"/>
             <Setter Property="Template">
                 <Setter.Value>
                     <ControlTemplate TargetType="{x:Type local:CustomTextBox}">
-                        <Border x:Name="border" Background="{TemplateBinding Background}" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" SnapsToDevicePixels="True">
+                        <Border x:Name="border" 
+                                Background="{TemplateBinding Background}" 
+                                BorderBrush="{TemplateBinding BorderBrush}" 
+                                BorderThickness="{TemplateBinding BorderThickness}" 
+                                SnapsToDevicePixels="True">
                             <Grid>
-                                <ScrollViewer x:Name="PART_ContentHost" Focusable="false" HorizontalScrollBarVisibility="Hidden" VerticalScrollBarVisibility="Hidden"/>
+                                <ScrollViewer x:Name="PART_ContentHost" 
+                                              Focusable="false" 
+                                              HorizontalScrollBarVisibility="Hidden" 
+                                              VerticalScrollBarVisibility="Hidden"/>
 
-                                <TextBlock x:Name="placeHolderTextBlock"
-                                           Foreground="Gray"
-                                           Text="{TemplateBinding PlaceholderText}"
-                                           FontSize="{TemplateBinding FontSize}"
-                                           FontFamily="{TemplateBinding FontFamily}"
-                                           VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
-                                           Visibility="Collapsed"/>
+                                <Grid x:Name="placeholderGrid"
+                                      Visibility="Collapsed">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="Auto"/>
+                                        <ColumnDefinition/>
+                                    </Grid.ColumnDefinitions>
+
+                                    <TextBlock Foreground="Gray"
+                                               FontFamily="Segoe MDL2 Assets"
+                                               FontSize="16"
+                                               Text="{TemplateBinding PlaceholderIcon}"
+                                               Margin="0,0,2,0"
+                                               VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
+
+                                    <TextBlock x:Name="placeHolderTextBlock"
+                                               Foreground="Gray"
+                                               Text="{TemplateBinding PlaceholderText}"
+                                               FontSize="{TemplateBinding FontSize}"
+                                               FontFamily="{TemplateBinding FontFamily}"
+                                               VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
+                                               Grid.Column="1"/>
+                                </Grid>
                             </Grid>
 
                         </Border>
@@ -107,7 +130,7 @@
                                 <Setter Property="BorderBrush" TargetName="border" Value="{StaticResource TextBox.Focus.Border}"/>
                             </Trigger>
                             <Trigger Property="Text" Value="">
-                                <Setter Property="Visibility" TargetName="placeHolderTextBlock" Value="Visible"/>
+                                <Setter Property="Visibility" TargetName="placeholderGrid" Value="Visible"/>
                             </Trigger>
                         </ControlTemplate.Triggers>
                     </ControlTemplate>
@@ -124,9 +147,10 @@
             </Style.Triggers>
         </Style>
     </Window.Resources>
-    
-    <StackPanel VerticalAlignment="Center">
-        <TextBox Style="{DynamicResource TextBoxStyle1}" 
+
+    <Grid x:Name="mainGrid">
+        <StackPanel VerticalAlignment="Center">
+            <TextBox Style="{DynamicResource TextBoxStyle1}" 
                  VerticalAlignment="Center"
                  HorizontalAlignment="Center"
                  Height="30"
@@ -136,13 +160,15 @@
                  VerticalContentAlignment="Center"
                  Margin="0,0,0,10"/>
 
-        <local:CustomTextBox HorizontalAlignment="Center"
+            <local:CustomTextBox HorizontalAlignment="Center"
                              Height="30"
                              Width="200"
                              FontSize="16"
                              VerticalContentAlignment="Center"
+                             PlaceholderIcon="&#xE721;"
                              PlaceholderText="Hello Kareem Sulthan.."
                              Padding="3,0,3,0"
                              Style="{StaticResource customTextBoxStyle}"/>
-    </StackPanel>
+        </StackPanel>
+    </Grid>
 </Window>
