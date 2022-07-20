@@ -1,7 +1,7 @@
-﻿<Application x:Class="DataGridWithColumnHeaderFilterBoxes.App"
+﻿<Application x:Class="GlyphIconButtonSampleApp.App"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-             xmlns:local="clr-namespace:DataGridWithColumnHeaderFilterBoxes"
+             xmlns:local="clr-namespace:GlyphIconButtonSampleApp"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
          
