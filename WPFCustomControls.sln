@@ -9,7 +9,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TextBoxWithPlaceHolderText"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PivotControl", "PivotControl\PivotControl.csproj", "{ACDD08A4-2DA9-441C-9EF1-0AA9098ED692}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GlyphIconButtonSampleApp", "GlyphIconButtonSampleApp\GlyphIconButtonSampleApp.csproj", "{0B41215F-C06C-490C-B441-11C95923E905}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GlyphIconButtonSampleApp", "GlyphIconButtonSampleApp\GlyphIconButtonSampleApp.csproj", "{0B41215F-C06C-490C-B441-11C95923E905}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ComboBoxWithPlaceHolderText", "ComboBoxWithPlaceHolderText\ComboBoxWithPlaceHolderText.csproj", "{80F13C2E-F06A-4764-85E9-D2B6091DAC3C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{0B41215F-C06C-490C-B441-11C95923E905}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0B41215F-C06C-490C-B441-11C95923E905}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0B41215F-C06C-490C-B441-11C95923E905}.Release|Any CPU.Build.0 = Release|Any CPU
+		{80F13C2E-F06A-4764-85E9-D2B6091DAC3C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{80F13C2E-F06A-4764-85E9-D2B6091DAC3C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{80F13C2E-F06A-4764-85E9-D2B6091DAC3C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{80F13C2E-F06A-4764-85E9-D2B6091DAC3C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

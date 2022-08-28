@@ -87,9 +87,9 @@
                                FontSize="16"
                                Content="Click me!"
                                Padding="10"
-                                VerticalAlignment="Center"
-                                HorizontalAlignment="Center"
-                                VerticalContentAlignment="Center"
-                                HorizontalContentAlignment="Center"/>
+                               VerticalAlignment="Center"
+                               HorizontalAlignment="Center"
+                               VerticalContentAlignment="Center"
+                               HorizontalContentAlignment="Center"/>
     </Grid>
 </Window>

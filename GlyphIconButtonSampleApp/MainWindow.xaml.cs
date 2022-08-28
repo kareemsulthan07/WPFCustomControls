@@ -84,7 +84,8 @@ namespace GlyphIconButtonSampleApp
             switch (e.Property.Name)
             {
                 case "Position":
-                    AdjustGlyphIcon();
+                    if (glyphIconTextBlock != null)
+                        AdjustGlyphIcon();
                     break;
 
                 case "GlyphIcon":
