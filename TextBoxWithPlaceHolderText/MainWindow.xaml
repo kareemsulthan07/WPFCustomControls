@@ -89,13 +89,31 @@
                                 BorderThickness="{TemplateBinding BorderThickness}" 
                                 SnapsToDevicePixels="True">
                             <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="Auto"/>
+                                </Grid.ColumnDefinitions>
+                                
                                 <ScrollViewer x:Name="PART_ContentHost" 
                                               Focusable="false" 
                                               HorizontalScrollBarVisibility="Hidden" 
                                               VerticalScrollBarVisibility="Hidden"/>
 
+                                <Button x:Name="clearTextButton"
+                                        Background="Transparent"
+                                        BorderThickness="0"
+                                        Foreground="SlateGray"
+                                        FontWeight="ExtraBlack"
+                                        FontFamily="Segoe MDL2 Assets"
+                                        Content="&#xF78A;"
+                                        Margin="2.5"
+                                        Width="20" 
+                                        Height="20"
+                                        Grid.Column="1"/>
+
                                 <Grid x:Name="placeholderGrid"
-                                      Visibility="Collapsed">
+                                      Visibility="Collapsed"
+                                      Grid.Column="0">
                                     <Grid.ColumnDefinitions>
                                         <ColumnDefinition Width="Auto"/>
                                         <ColumnDefinition/>
@@ -114,6 +132,7 @@
                                                FontSize="{TemplateBinding FontSize}"
                                                FontFamily="{TemplateBinding FontFamily}"
                                                VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
+                                               TextTrimming="CharacterEllipsis"
                                                Grid.Column="1"/>
                                 </Grid>
                             </Grid>
@@ -131,6 +150,7 @@
                             </Trigger>
                             <Trigger Property="Text" Value="">
                                 <Setter Property="Visibility" TargetName="placeholderGrid" Value="Visible"/>
+                                <Setter Property="Visibility" TargetName="clearTextButton" Value="Collapsed"/>
                             </Trigger>
                         </ControlTemplate.Triggers>
                     </ControlTemplate>
@@ -151,14 +171,14 @@
     <Grid x:Name="mainGrid">
         <StackPanel VerticalAlignment="Center">
             <TextBox Style="{DynamicResource TextBoxStyle1}" 
-                 VerticalAlignment="Center"
-                 HorizontalAlignment="Center"
-                 Height="30"
-                 Width="200"
-                 FontSize="16"
-                 Padding="4,0,0,0"
-                 VerticalContentAlignment="Center"
-                 Margin="0,0,0,10"/>
+                         VerticalAlignment="Center"
+                         HorizontalAlignment="Center"
+                         Height="30"
+                         Width="200"
+                         FontSize="16"
+                         Padding="4,0,0,0"
+                         VerticalContentAlignment="Center"
+                         Margin="0,0,0,10"/>
 
             <local:CustomTextBox HorizontalAlignment="Center"
                              Height="30"

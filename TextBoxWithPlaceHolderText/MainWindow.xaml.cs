@@ -30,6 +30,8 @@ namespace TextBoxWithPlaceHolderText
 
     public class CustomTextBox : TextBox
     {
+        private Button clearTextButton;
+
         public string PlaceholderText
         {
             get { return (string)GetValue(PlaceholderTextProperty); }
@@ -63,6 +65,17 @@ namespace TextBoxWithPlaceHolderText
                 placeholderGrid.Margin = new Thickness(this.Padding.Left + 3, 0, 0, 0);
             }
 
+
+            if (Template.FindName("clearTextButton", this) is Button button)
+            {
+                clearTextButton = button;
+                button.Click += OnClearButtonClick;
+            }
+        }
+
+        private void OnClearButtonClick(object sender, RoutedEventArgs e)
+        {
+            this.Text = "";
         }
     }
 }
