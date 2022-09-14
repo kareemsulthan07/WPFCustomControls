@@ -6,7 +6,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows;
 
-namespace ExtendedListView
+namespace ExtendedListView_LoadMore
 {
     /// <summary>
     /// Interaction logic for App.xaml
