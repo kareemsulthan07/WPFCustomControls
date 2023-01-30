@@ -13,9 +13,13 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ComboBoxWithPlaceHolderText
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NumericUpDownControlSample", "NumericUpDownControl\NumericUpDownControlSample.csproj", "{E97CDBAC-F107-4797-AB16-6A4AB5FDFE8E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExtendedListView_Reordering", "ExtendedListView_Reordering\ExtendedListView_Reordering.csproj", "{21FA7192-362E-449E-953A-D8ED4F2F5DF4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ExtendedListView_Reordering", "ExtendedListView_Reordering\ExtendedListView_Reordering.csproj", "{21FA7192-362E-449E-953A-D8ED4F2F5DF4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExtendedListView_LoadMore", "ExtendedListView_LoadMore\ExtendedListView_LoadMore.csproj", "{2BA0720F-CFF7-4764-92B6-FE0805892F59}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ExtendedListView_LoadMore", "ExtendedListView_LoadMore\ExtendedListView_LoadMore.csproj", "{2BA0720F-CFF7-4764-92B6-FE0805892F59}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EditableTextBlockSample", "EditableTextBlockSample\EditableTextBlockSample.csproj", "{2FED294B-4D00-4133-A803-938EE4049A04}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RadioButtonWithTickMarkSampleApp", "RadioButtonWithTickMarkSampleApp\RadioButtonWithTickMarkSampleApp.csproj", "{535A04C9-D385-44AB-9982-61B32FAC758E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -51,6 +55,14 @@ Global
 		{2BA0720F-CFF7-4764-92B6-FE0805892F59}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2BA0720F-CFF7-4764-92B6-FE0805892F59}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2BA0720F-CFF7-4764-92B6-FE0805892F59}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2FED294B-4D00-4133-A803-938EE4049A04}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2FED294B-4D00-4133-A803-938EE4049A04}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2FED294B-4D00-4133-A803-938EE4049A04}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2FED294B-4D00-4133-A803-938EE4049A04}.Release|Any CPU.Build.0 = Release|Any CPU
+		{535A04C9-D385-44AB-9982-61B32FAC758E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{535A04C9-D385-44AB-9982-61B32FAC758E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{535A04C9-D385-44AB-9982-61B32FAC758E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{535A04C9-D385-44AB-9982-61B32FAC758E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
