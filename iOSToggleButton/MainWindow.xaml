@@ -5,7 +5,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:iOSToggleButton"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="450" Width="800"
+        Background="Black">
     <Window.Resources>
         <Color x:Key="grayColor">#e0e0e0</Color>
         <Color x:Key="greenColor">#5bc25f</Color>
@@ -15,13 +16,13 @@
         <ControlTemplate x:Key="toggleButtonStyle" TargetType="{x:Type ToggleButton}">
             <Border x:Name="border" 
                     Background="{DynamicResource toggleButtonBackgroundBrush}"
-                    CornerRadius="12"
+                    CornerRadius="25"
                     SnapsToDevicePixels="true">
                 <Canvas Background="Transparent">
                     <Ellipse x:Name="ellipse"
                              Fill="White"
-                             Width="19" Height="19"
-                             Canvas.Top="3" Canvas.Left="3"
+                             Width="47" Height="47"
+                             Canvas.Top="4" Canvas.Left="6"
                              SnapsToDevicePixels="True"/>
 
                 </Canvas>
@@ -32,7 +33,7 @@
                         <Storyboard>
                             <DoubleAnimation Storyboard.TargetName="ellipse"
                                              Storyboard.TargetProperty="(Canvas.Left)"
-                                             From="3" To="33" Duration="0:0:0.15"
+                                             From="6" To="97" Duration="0:0:0.15"
                                              AutoReverse="False"/>
                             <ColorAnimation Storyboard.TargetName="border"
                                             Storyboard.TargetProperty="Background.Color"
@@ -45,7 +46,7 @@
                         <Storyboard>
                             <DoubleAnimation Storyboard.TargetName="ellipse"
                                              Storyboard.TargetProperty="(Canvas.Left)"
-                                             From="33" To="3" Duration="0:0:0.15"
+                                             From="97" To="6" Duration="0:0:0.15"
                                              AutoReverse="False"/>
                             <ColorAnimation Storyboard.TargetName="border"
                                             Storyboard.TargetProperty="Background.Color"
@@ -57,10 +58,17 @@
         </ControlTemplate>
     </Window.Resources>
     
-    <Grid>
+    <StackPanel VerticalAlignment="Center"
+                HorizontalAlignment="Center">
         <ToggleButton VerticalAlignment="Center"
                       HorizontalAlignment="Center"
-                      Width="55" Height="25"
+                      Width="150" Height="55"
                       Template="{DynamicResource toggleButtonStyle}"/>
-    </Grid>
+
+        <ToggleButton VerticalAlignment="Center"
+                      HorizontalAlignment="Center"
+                      Width="150" Height="55"
+                      Margin="0,50,0,0"
+                      Template="{DynamicResource toggleButtonStyle}"/>
+    </StackPanel>
 </Window>
