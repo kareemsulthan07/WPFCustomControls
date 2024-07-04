@@ -23,7 +23,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RadioButtonWithTickMarkSamp
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TextBlockButtonSample", "TextBlockButtonSample\TextBlockButtonSample.csproj", "{A5119E3A-C099-45D0-8004-7B7C4C3FEFC2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "iOSToggleButton", "iOSToggleButton\iOSToggleButton.csproj", "{31DEA256-5397-4839-BB31-9D3A735BDFFE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "iOSToggleButton", "iOSToggleButton\iOSToggleButton.csproj", "{31DEA256-5397-4839-BB31-9D3A735BDFFE}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

@@ -94,23 +94,6 @@
                                     <ColumnDefinition Width="Auto"/>
                                 </Grid.ColumnDefinitions>
                                 
-                                <ScrollViewer x:Name="PART_ContentHost" 
-                                              Focusable="false" 
-                                              HorizontalScrollBarVisibility="Hidden" 
-                                              VerticalScrollBarVisibility="Hidden"/>
-
-                                <Button x:Name="clearTextButton"
-                                        Background="Transparent"
-                                        BorderThickness="0"
-                                        Foreground="SlateGray"
-                                        FontWeight="ExtraBlack"
-                                        FontFamily="Segoe MDL2 Assets"
-                                        Content="&#xF78A;"
-                                        Margin="2.5"
-                                        Width="20" 
-                                        Height="20"
-                                        Grid.Column="1"/>
-
                                 <Grid x:Name="placeholderGrid"
                                       Visibility="Collapsed"
                                       Grid.Column="0">
@@ -135,6 +118,24 @@
                                                TextTrimming="CharacterEllipsis"
                                                Grid.Column="1"/>
                                 </Grid>
+                                
+                                <ScrollViewer x:Name="PART_ContentHost" 
+                                              Focusable="false" 
+                                              HorizontalScrollBarVisibility="Hidden" 
+                                              VerticalScrollBarVisibility="Hidden"
+                                              Grid.Column="0"/>
+
+                                <Button x:Name="clearTextButton"
+                                        Background="Transparent"
+                                        BorderThickness="0"
+                                        Foreground="SlateGray"
+                                        FontWeight="ExtraBlack"
+                                        FontFamily="Segoe MDL2 Assets"
+                                        Content="&#xF78A;"
+                                        Margin="2.5"
+                                        Width="20" 
+                                        Height="20"
+                                        Grid.Column="1"/>
                             </Grid>
 
                         </Border>
