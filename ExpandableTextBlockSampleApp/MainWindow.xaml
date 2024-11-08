@@ -1,0 +1,20 @@
+﻿<Window x:Class="ExpandableTextBlockSampleApp.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ExpandableTextBlockSampleApp"
+        mc:Ignorable="d"
+        Title="MainWindow"
+        Height="450"
+        Width="1000"
+        WindowStartupLocation="CenterScreen">
+    <Grid Margin="200,0">
+        <local:ExpandableTextBlock IsExpanded="False"
+                                   FontSize="20"
+                                   VerticalAlignment="Center"
+                                   HorizontalAlignment="Left">
+            This is a WPF TextBlock that expands and collapses when clicked.
+        </local:ExpandableTextBlock>
+    </Grid>
+</Window>
