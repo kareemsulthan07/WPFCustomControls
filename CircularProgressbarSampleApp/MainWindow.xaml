@@ -5,66 +5,74 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:CircularProgressbarSampleApp"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow"
+        Height="450"
+        Width="800"
+        WindowStartupLocation="CenterScreen">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="*" />
             <RowDefinition Height="Auto" />
         </Grid.RowDefinitions>
 
-        <Canvas Width="200"
-                Height="200">
-            <!--<Path x:Name="BackgroundArc"
+        <Grid x:Name="circleContainer"
+              Grid.Row="0"
+              SizeChanged="circleContainer_SizeChanged">
+            <!-- Background Circle -->
+            <Path x:Name="backgroundCircle"
                   Stroke="#EEEEEE"
-                  StrokeThickness="20">
+                  StrokeThickness="15">
                 <Path.Data>
-                    <PathGeometry>
-                        <PathFigure StartPoint="100,10">
-                            <ArcSegment Point="100,190"
-                                        Size="90,90"
-                                        IsLargeArc="False"
-                                        SweepDirection="Clockwise" />
-                        </PathFigure>
-                    </PathGeometry>
-                </Path.Data>
-            </Path>-->
-
-            <Ellipse Width="180"
-                     Height="180"
-                     Stroke="#EEEEEE"
-                     StrokeThickness="20"
-                     Canvas.Left="10"
-                     Canvas.Top="10" />
-
-            <Path x:Name="ProgressArc"
-                  Stroke="#4CAF50"
-                  StrokeThickness="20">
-                <Path.Data>
-                    <PathGeometry>
-                        <PathFigure StartPoint="100,10">
-                            <ArcSegment x:Name="ProgressArcSegment"
-                                        Point="100,10"
-                                        Size="90,90"
-                                        IsLargeArc="False"
-                                        SweepDirection="Clockwise" />
-                        </PathFigure>
-                    </PathGeometry>
+                    <EllipseGeometry x:Name="backgroundGeometry" />
                 </Path.Data>
             </Path>
-            
-            <TextBlock x:Name="ProgressText"
-                       Text="0%"
-                       FontSize="24"
-                       FontWeight="Bold"
-                       Canvas.Left="70"
-                       Canvas.Top="85" />
-        </Canvas>
 
-        <Button Content="Increment Progress"
-                Grid.Row="1"
-                Width="150"
-                Height="30"
-                Margin="10"
-                Click="IncrementProgress_Click" />
+            <!-- Progress Arc -->
+            <Path x:Name="progressArc"
+                  Stroke="#007ACC"
+                  StrokeThickness="15"
+                  StrokeStartLineCap="Round"
+                  StrokeEndLineCap="Round" />
+
+            <!-- Percentage Text -->
+            <Viewbox x:Name="textViewbox"
+                     Stretch="Uniform"
+                     Width="60"
+                     Height="30">
+                <TextBlock x:Name="percentageText"
+                           Text="0%"
+                           FontWeight="SemiBold" />
+            </Viewbox>
+        </Grid>
+
+        <!-- Slider Control -->
+        <StackPanel Grid.Row="1"
+                    Margin="20">
+            <Slider x:Name="progressSlider" 
+                    IsSnapToTickEnabled="True"
+                    TickFrequency="1"
+                    Minimum="0"
+                    Maximum="100"
+                    Value="75"
+                    ValueChanged="progressSlider_ValueChanged" />
+
+            <Grid Margin="0,5,0,0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+
+                <TextBlock Text="0%"
+                           Grid.Column="0"
+                           HorizontalAlignment="Left" />
+                <TextBlock Text="50%"
+                           Grid.Column="1"
+                           HorizontalAlignment="Center" />
+                <TextBlock Text="100%"
+                           Grid.Column="2"
+                           HorizontalAlignment="Right" />
+            </Grid>
+        </StackPanel>
     </Grid>
 </Window>
