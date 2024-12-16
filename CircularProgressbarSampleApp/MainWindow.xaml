@@ -8,8 +8,9 @@
         Title="MainWindow"
         Height="450"
         Width="800"
-        WindowStartupLocation="CenterScreen">
-    <Grid>
+        WindowStartupLocation="CenterScreen"
+        SnapsToDevicePixels="True">
+    <Grid Background="White">
         <Grid.RowDefinitions>
             <RowDefinition Height="*" />
             <RowDefinition Height="Auto" />

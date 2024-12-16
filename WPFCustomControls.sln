@@ -31,6 +31,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CircularProgressbarSampleAp
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExpandableTextBlockSampleApp", "ExpandableTextBlockSampleApp\ExpandableTextBlockSampleApp.csproj", "{3FB619DA-6098-471E-9ED5-324F178FF67C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChatGPTWpfApp", "ChatGPTWpfApp\ChatGPTWpfApp.csproj", "{19F63C93-1920-4CEC-9F3F-0C9BB4CF34B6}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -93,6 +95,10 @@ Global
 		{3FB619DA-6098-471E-9ED5-324F178FF67C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3FB619DA-6098-471E-9ED5-324F178FF67C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3FB619DA-6098-471E-9ED5-324F178FF67C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{19F63C93-1920-4CEC-9F3F-0C9BB4CF34B6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{19F63C93-1920-4CEC-9F3F-0C9BB4CF34B6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{19F63C93-1920-4CEC-9F3F-0C9BB4CF34B6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{19F63C93-1920-4CEC-9F3F-0C9BB4CF34B6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
