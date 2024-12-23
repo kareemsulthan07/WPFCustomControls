@@ -33,6 +33,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExpandableTextBlockSampleAp
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChatGPTWpfApp", "ChatGPTWpfApp\ChatGPTWpfApp.csproj", "{19F63C93-1920-4CEC-9F3F-0C9BB4CF34B6}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TagsTextBoxSampleWpfApp", "TagsTextBoxSampleWpfApp\TagsTextBoxSampleWpfApp.csproj", "{0C4FB638-9782-489E-8422-75BA6F08A7A3}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -99,6 +101,10 @@ Global
 		{19F63C93-1920-4CEC-9F3F-0C9BB4CF34B6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{19F63C93-1920-4CEC-9F3F-0C9BB4CF34B6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{19F63C93-1920-4CEC-9F3F-0C9BB4CF34B6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0C4FB638-9782-489E-8422-75BA6F08A7A3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0C4FB638-9782-489E-8422-75BA6F08A7A3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0C4FB638-9782-489E-8422-75BA6F08A7A3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0C4FB638-9782-489E-8422-75BA6F08A7A3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
