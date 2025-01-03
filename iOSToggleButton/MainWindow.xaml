@@ -5,70 +5,92 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:iOSToggleButton"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800"
+        Title="MainWindow"
+        Height="450"
+        Width="800"
         Background="Black">
     <Window.Resources>
         <Color x:Key="grayColor">#e0e0e0</Color>
         <Color x:Key="greenColor">#5bc25f</Color>
 
-        <SolidColorBrush x:Key="toggleButtonBackgroundBrush" Color="{StaticResource grayColor}"/>
+        <SolidColorBrush x:Key="toggleButtonBackgroundBrush"
+                         Color="{StaticResource grayColor}" />
 
-        <ControlTemplate x:Key="toggleButtonStyle" TargetType="{x:Type ToggleButton}">
-            <Border x:Name="border" 
+        <ControlTemplate x:Key="toggleButtonStyle"
+                         TargetType="{x:Type ToggleButton}">
+            <Border x:Name="border"
                     Background="{DynamicResource toggleButtonBackgroundBrush}"
                     CornerRadius="25"
                     SnapsToDevicePixels="true">
                 <Canvas Background="Transparent">
                     <Ellipse x:Name="ellipse"
                              Fill="White"
-                             Width="47" Height="47"
-                             Canvas.Top="4" Canvas.Left="6"
-                             SnapsToDevicePixels="True"/>
-
+                             Width="47"
+                             Height="47"
+                             Canvas.Top="4"
+                             Canvas.Left="6"
+                             SnapsToDevicePixels="True" />
                 </Canvas>
             </Border>
             <ControlTemplate.Triggers>
-                <EventTrigger RoutedEvent="ToggleButton.Checked">
-                    <BeginStoryboard>
-                        <Storyboard>
-                            <DoubleAnimation Storyboard.TargetName="ellipse"
-                                             Storyboard.TargetProperty="(Canvas.Left)"
-                                             From="6" To="97" Duration="0:0:0.15"
-                                             AutoReverse="False"/>
-                            <ColorAnimation Storyboard.TargetName="border"
-                                            Storyboard.TargetProperty="Background.Color"
-                                            From="{StaticResource grayColor}" To="{StaticResource greenColor}" Duration="0:0:0.15"/>
-                        </Storyboard>
-                    </BeginStoryboard>
-                </EventTrigger>
-                <EventTrigger RoutedEvent="ToggleButton.Unchecked">
-                    <BeginStoryboard>
-                        <Storyboard>
-                            <DoubleAnimation Storyboard.TargetName="ellipse"
-                                             Storyboard.TargetProperty="(Canvas.Left)"
-                                             From="97" To="6" Duration="0:0:0.15"
-                                             AutoReverse="False"/>
-                            <ColorAnimation Storyboard.TargetName="border"
-                                            Storyboard.TargetProperty="Background.Color"
-                                            From="{StaticResource greenColor}" To="{StaticResource grayColor}" Duration="0:0:0.15"/>
-                        </Storyboard>
-                    </BeginStoryboard>
-                </EventTrigger>
+                <Trigger Property="IsChecked"
+                         Value="True">
+                    <Trigger.EnterActions>
+                        <BeginStoryboard>
+                            <Storyboard>
+                                <DoubleAnimation Storyboard.TargetName="ellipse"
+                                                 Storyboard.TargetProperty="(Canvas.Left)"
+                                                 From="6"
+                                                 To="97"
+                                                 Duration="0:0:0.15"
+                                                 AutoReverse="False" />
+                                <ColorAnimation Storyboard.TargetName="border"
+                                                Storyboard.TargetProperty="Background.Color"
+                                                From="{StaticResource grayColor}"
+                                                To="{StaticResource greenColor}"
+                                                Duration="0:0:0.15" />
+                            </Storyboard>
+                        </BeginStoryboard>
+                    </Trigger.EnterActions>
+                    <Trigger.ExitActions>
+                        <BeginStoryboard>
+                            <Storyboard>
+                                <DoubleAnimation Storyboard.TargetName="ellipse"
+                                                 Storyboard.TargetProperty="(Canvas.Left)"
+                                                 From="97"
+                                                 To="6"
+                                                 Duration="0:0:0.15"
+                                                 AutoReverse="False" />
+                                <ColorAnimation Storyboard.TargetName="border"
+                                                Storyboard.TargetProperty="Background.Color"
+                                                From="{StaticResource greenColor}"
+                                                To="{StaticResource grayColor}"
+                                                Duration="0:0:0.15" />
+                            </Storyboard>
+                        </BeginStoryboard>
+                    </Trigger.ExitActions>
+                </Trigger>
             </ControlTemplate.Triggers>
         </ControlTemplate>
     </Window.Resources>
-    
+
     <StackPanel VerticalAlignment="Center"
                 HorizontalAlignment="Center">
-        <ToggleButton VerticalAlignment="Center"
+        <ToggleButton x:Name="toggleButton1"
+                      IsChecked="True"
+                      VerticalAlignment="Center"
                       HorizontalAlignment="Center"
-                      Width="150" Height="55"
-                      Template="{DynamicResource toggleButtonStyle}"/>
+                      Width="150"
+                      Height="55"
+                      Template="{DynamicResource toggleButtonStyle}" />
 
-        <ToggleButton VerticalAlignment="Center"
+        <ToggleButton x:Name="toggleButton2"
+                      IsChecked="False"
+                      VerticalAlignment="Center"
                       HorizontalAlignment="Center"
-                      Width="150" Height="55"
+                      Width="150"
+                      Height="55"
                       Margin="0,50,0,0"
-                      Template="{DynamicResource toggleButtonStyle}"/>
+                      Template="{DynamicResource toggleButtonStyle}" />
     </StackPanel>
 </Window>

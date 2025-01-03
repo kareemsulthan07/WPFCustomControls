@@ -23,6 +23,14 @@ namespace iOSToggleButton
         public MainWindow()
         {
             InitializeComponent();
+
+            this.Loaded += MainWindow_Loaded;
+        }
+
+        private void MainWindow_Loaded(object sender, RoutedEventArgs e)
+        {
+            //toggleButton1.IsChecked = true;
+            //toggleButton2.IsChecked = true;
         }
     }
 }
