@@ -39,6 +39,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WinFileExplorerTabSystemWpf
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SelectableTextBlockSampleWpfApp", "SelectableTextBlockSampleWpfApp\SelectableTextBlockSampleWpfApp.csproj", "{0130D35B-97DD-46D5-9FED-6E839524AFA5}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CalendarWpfApp", "CalendarWpfApp\CalendarWpfApp.csproj", "{BF85EE7C-503D-4F8B-A1F4-0149D72303E8}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -117,6 +119,10 @@ Global
 		{0130D35B-97DD-46D5-9FED-6E839524AFA5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0130D35B-97DD-46D5-9FED-6E839524AFA5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0130D35B-97DD-46D5-9FED-6E839524AFA5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BF85EE7C-503D-4F8B-A1F4-0149D72303E8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BF85EE7C-503D-4F8B-A1F4-0149D72303E8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BF85EE7C-503D-4F8B-A1F4-0149D72303E8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BF85EE7C-503D-4F8B-A1F4-0149D72303E8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
