@@ -41,6 +41,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SelectableTextBlockSampleWp
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CalendarWpfApp", "CalendarWpfApp\CalendarWpfApp.csproj", "{BF85EE7C-503D-4F8B-A1F4-0149D72303E8}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PasswordBoxSampleWpfApp", "PasswordBoxSampleWpfApp\PasswordBoxSampleWpfApp.csproj", "{6C710A66-9256-443A-B21B-9EC18D87B60C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -123,6 +125,10 @@ Global
 		{BF85EE7C-503D-4F8B-A1F4-0149D72303E8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BF85EE7C-503D-4F8B-A1F4-0149D72303E8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BF85EE7C-503D-4F8B-A1F4-0149D72303E8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6C710A66-9256-443A-B21B-9EC18D87B60C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6C710A66-9256-443A-B21B-9EC18D87B60C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6C710A66-9256-443A-B21B-9EC18D87B60C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6C710A66-9256-443A-B21B-9EC18D87B60C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
